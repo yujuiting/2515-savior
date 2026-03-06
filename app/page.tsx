@@ -105,59 +105,58 @@ function StatsSection() {
   const right = useCountUp(8.24, 1500, 2);
 
   return (
-    <section
-      className="w-full"
-      style={{ background: '#0a1628' }}
-    >
-      <div className="w-full grid md:grid-cols-2">
-        {/* Left card - sky blue with clouds */}
-        <div
-          ref={left.ref}
-          className="px-8 py-10 md:px-16 md:py-12"
-          style={{
-            background: `
-              radial-gradient(ellipse 140px 70px at 15% 20%, rgba(255,255,255,0.75) 0%, transparent 65%),
-              radial-gradient(ellipse 90px 45px at 32% 15%, rgba(255,255,255,0.55) 0%, transparent 65%),
-              radial-gradient(ellipse 110px 55px at 65% 35%, rgba(255,255,255,0.45) 0%, transparent 65%),
-              radial-gradient(ellipse 70px 35px at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 65%),
-              radial-gradient(ellipse 80px 40px at 50% 60%, rgba(255,255,255,0.3) 0%, transparent 65%),
-              linear-gradient(180deg, #6bb8d8 0%, #9dd0e8 50%, #b8dff0 100%)
-            `,
-          }}
-        >
-          <p className="font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)', color: '#0d2a4a' }}>
-            寶佳入主華建後<br />改善經營股價翻倍
-          </p>
-          <p className="font-black leading-none" style={{ color: '#1a3f6e', fontSize: 'clamp(80px, 13vw, 110px)' }}>
-            {left.value}%
-          </p>
-          <p className="mt-3 text-sm" style={{ color: '#334455' }}>每股$15至每股$60</p>
+    <section style={{ background: '#0a1628' }}>
+      <div className="max-w-[960px] mx-auto">
+        <div className="grid md:grid-cols-2">
+          {/* Left card - sky blue with clouds */}
+          <div
+            ref={left.ref}
+            className="px-8 py-10 md:px-16 md:py-12"
+            style={{
+              background: `
+                radial-gradient(ellipse 140px 70px at 15% 20%, rgba(255,255,255,0.75) 0%, transparent 65%),
+                radial-gradient(ellipse 90px 45px at 32% 15%, rgba(255,255,255,0.55) 0%, transparent 65%),
+                radial-gradient(ellipse 110px 55px at 65% 35%, rgba(255,255,255,0.45) 0%, transparent 65%),
+                radial-gradient(ellipse 70px 35px at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 65%),
+                radial-gradient(ellipse 80px 40px at 50% 60%, rgba(255,255,255,0.3) 0%, transparent 65%),
+                linear-gradient(180deg, #6bb8d8 0%, #9dd0e8 50%, #b8dff0 100%)
+              `,
+            }}
+          >
+            <p className="font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)', color: '#0d2a4a' }}>
+              寶佳入主華建後<br />改善經營股價翻倍
+            </p>
+            <p className="font-black leading-none" style={{ color: '#1a3f6e', fontSize: 'clamp(80px, 13vw, 110px)' }}>
+              {left.value}%
+            </p>
+            <p className="mt-3 text-sm" style={{ color: '#334455' }}>每股$15至每股$60</p>
+          </div>
+
+          {/* Right card */}
+          <div
+            ref={right.ref}
+            className="px-8 py-10 md:px-16 md:py-12"
+            style={{ background: 'rgba(26, 26, 26, 0.92)' }}
+          >
+            <p className="text-white font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)' }}>
+              中工市場派經營不當<br />過去10年股價平均
+            </p>
+            <p className="font-black leading-none" style={{ color: '#4A7FB5', fontSize: 'clamp(80px, 13vw, 110px)' }}>
+              ${right.value.toFixed(2)}
+            </p>
+            <p className="mt-3 text-sm" style={{ color: '#AAAAAA' }}>2015/11 至 2025/10</p>
+          </div>
         </div>
 
-        {/* Right card */}
+        {/* Bottom tagline bar */}
         <div
-          ref={right.ref}
-          className="px-8 py-10 md:px-16 md:py-12"
-          style={{ background: 'rgba(26, 26, 26, 0.92)' }}
+          className="py-4 px-4 text-center"
+          style={{ background: '#2E7BBF' }}
         >
-          <p className="text-white font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)' }}>
-            中工市場派經營不當<br />過去10年股價平均
+          <p className="text-white font-black tracking-wide" style={{ fontSize: 'clamp(20px, 3vw, 30px)' }}>
+            如何選擇，股東的眼睛是雪亮的
           </p>
-          <p className="font-black leading-none" style={{ color: '#4A7FB5', fontSize: 'clamp(80px, 13vw, 110px)' }}>
-            ${right.value.toFixed(2)}
-          </p>
-          <p className="mt-3 text-sm" style={{ color: '#AAAAAA' }}>2015/11 至 2025/10</p>
         </div>
-      </div>
-
-      {/* Bottom tagline bar */}
-      <div
-        className="w-full py-4 px-4 text-center"
-        style={{ background: '#2E7BBF' }}
-      >
-        <p className="text-white font-black tracking-wide" style={{ fontSize: 'clamp(20px, 3vw, 30px)' }}>
-          如何選擇，股東的眼睛是雪亮的
-        </p>
       </div>
     </section>
   );
@@ -176,7 +175,7 @@ function StrategySection() {
       className="w-full py-16 px-4"
       style={{ background: 'linear-gradient(180deg, #dbeafe, #ffffff)' }}
     >
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-[960px] mx-auto">
         <div className="flex items-center gap-4 mb-12">
           <div className="flex-1 h-px bg-blue-400" />
           <h2 className="text-2xl md:text-3xl font-bold text-blue-900 whitespace-nowrap">
@@ -217,8 +216,8 @@ function StrategyItem({ item, delay }: { item: typeof strategies[0]; delay: numb
 
 function Footer() {
   return (
-    <footer className="w-full py-12 px-4 text-center" style={{ background: '#0a1628' }}>
-      <div className="max-w-md mx-auto">
+    <footer style={{ background: '#0a1628' }}>
+      <div className="max-w-[960px] mx-auto py-12 px-4 text-center">
         <img
           src="/header/mobile/mHeader2-CTA.png"
           alt="LINE QR Code"
