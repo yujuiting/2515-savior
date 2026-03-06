@@ -107,9 +107,7 @@ function StatsSection() {
   return (
     <section
       className="w-full"
-      style={{
-        background: 'linear-gradient(180deg, #a8d4f0 0%, #c8e6f5 40%, #7bb8d4 100%)',
-      }}
+      style={{ background: '#0a1628' }}
     >
       <div className="max-w-5xl mx-auto grid md:grid-cols-2">
         {/* Left card */}
