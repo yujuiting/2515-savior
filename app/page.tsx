@@ -136,7 +136,7 @@ function StatsSection() {
           <div
             ref={right.ref}
             className="px-8 py-10 md:px-16 md:py-12"
-            style={{ background: 'rgba(26, 26, 26, 0.92)' }}
+            style={{ background: '#0d1f35' }}
           >
             <p className="text-white font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)' }}>
               中工市場派經營不當<br />過去10年股價平均
@@ -173,15 +173,15 @@ function StrategySection() {
   return (
     <section
       className="w-full py-16 px-4"
-      style={{ background: 'linear-gradient(180deg, #dbeafe, #ffffff)' }}
+      style={{ background: '#0a1628' }}
     >
       <div className="max-w-[960px] mx-auto">
         <div className="flex items-center gap-4 mb-12">
-          <div className="flex-1 h-px bg-blue-400" />
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-900 whitespace-nowrap">
+          <div className="flex-1 h-px bg-blue-700" />
+          <h2 className="text-2xl md:text-3xl font-bold text-white whitespace-nowrap">
             翻轉中工：加減乘除
           </h2>
-          <div className="flex-1 h-px bg-blue-400" />
+          <div className="flex-1 h-px bg-blue-700" />
         </div>
         <div className="space-y-6">
           {strategies.map((item, i) => (
@@ -199,15 +199,15 @@ function StrategyItem({ item, delay }: { item: typeof strategies[0]; delay: numb
   return (
     <div
       ref={ref}
-      className="border-l-4 border-blue-600 pl-6 py-4 transition-all duration-700"
+      className="border-l-4 border-blue-500 pl-6 py-4 transition-all duration-700"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(24px)',
         transitionDelay: `${delay}ms`,
       }}
     >
-      <p className="text-lg md:text-xl text-gray-800">
-        <span className="font-bold text-blue-700 text-2xl mr-2">{item.char}</span>
+      <p className="text-lg md:text-xl text-gray-200">
+        <span className="font-bold text-blue-400 text-2xl mr-2">{item.char}</span>
         ：{item.text}
       </p>
     </div>
@@ -242,7 +242,7 @@ function Footer() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen" style={{ background: '#0a1628' }}>
       <HeroSection />
       <StatsSection />
       <StrategySection />
