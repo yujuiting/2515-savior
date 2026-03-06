@@ -110,11 +110,20 @@ function StatsSection() {
       style={{ background: '#0a1628' }}
     >
       <div className="max-w-5xl mx-auto grid md:grid-cols-2">
-        {/* Left card */}
+        {/* Left card - sky blue with clouds */}
         <div
           ref={left.ref}
           className="p-8 md:p-10"
-          style={{ background: 'rgba(26, 26, 26, 0.92)' }}
+          style={{
+            background: `
+              radial-gradient(ellipse 140px 70px at 15% 20%, rgba(255,255,255,0.75) 0%, transparent 65%),
+              radial-gradient(ellipse 90px 45px at 32% 15%, rgba(255,255,255,0.55) 0%, transparent 65%),
+              radial-gradient(ellipse 110px 55px at 65% 35%, rgba(255,255,255,0.45) 0%, transparent 65%),
+              radial-gradient(ellipse 70px 35px at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 65%),
+              radial-gradient(ellipse 80px 40px at 50% 60%, rgba(255,255,255,0.3) 0%, transparent 65%),
+              linear-gradient(180deg, #6bb8d8 0%, #9dd0e8 50%, #b8dff0 100%)
+            `,
+          }}
         >
           <p className="text-white font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)' }}>
             寶佳入主華建後<br />改善經營股價翻倍
