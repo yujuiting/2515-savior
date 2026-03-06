@@ -222,7 +222,7 @@ function Footer() {
         <img
           src="/header/mobile/mHeader2-CTA.png"
           alt="LINE QR Code"
-          className="mx-auto mb-6 w-48 h-48 object-contain"
+          className="mx-auto mb-6 w-full max-w-sm object-contain"
         />
         <a
           href="https://line.me/R/ti/p/@452zsagz"
