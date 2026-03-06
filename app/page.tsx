@@ -80,8 +80,8 @@ function HeroSection() {
             key={i}
             src={layer.desktop}
             alt={layer.alt}
-            className={`absolute top-0 left-0 w-full h-full object-cover ${i === 0 ? '' : 'object-contain'}`}
-            style={i === 0 ? {} : { objectFit: 'contain', objectPosition: 'center' }}
+            className="absolute top-0 left-0 w-full h-full"
+            style={{ objectFit: 'fill' }}
           />
         ))}
       </div>
