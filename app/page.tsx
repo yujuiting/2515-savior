@@ -86,15 +86,15 @@ function HeroSection() {
         ))}
       </div>
       {/* Mobile */}
-      <div className="md:hidden relative w-full" style={{ aspectRatio: '750 / 600' }}>
-        {layers.map((layer, i) => (
-          <img
-            key={i}
-            src={layer.mobile}
-            alt={layer.alt}
-            className={`absolute top-0 left-0 w-full h-full ${i === 0 ? 'object-cover' : 'object-contain'}`}
-          />
-        ))}
+      <div className="md:hidden relative w-full">
+        <img
+          src="/header/mobile/mHeader4-Bottom.png"
+          alt="Background"
+          className="w-full block"
+        />
+        <img src="/header/mobile/mHeader1-Top.png" alt="Foreground" className="absolute top-0 left-0 w-full" />
+        <img src="/header/mobile/mHeader3-Text.png" alt="Title" className="absolute top-0 left-0 w-full" />
+        <img src="/header/mobile/mHeader2-CTA.png" alt="CTA" className="absolute top-0 left-0 w-full" />
       </div>
     </section>
   );
@@ -102,7 +102,7 @@ function HeroSection() {
 
 function StatsSection() {
   const left = useCountUp(400, 1500, 0);
-  const right = useCountUp(0.24, 1500, 2);
+  const right = useCountUp(8.24, 1500, 2);
 
   return (
     <section className="w-full py-16 px-4" style={{ background: '#0a1628' }}>
@@ -118,7 +118,7 @@ function StatsSection() {
           <p className="text-6xl md:text-8xl font-black" style={{ color: '#f5c542' }}>
             {left.value}%
           </p>
-          <p className="text-gray-400 mt-4 text-sm">每股至每股</p>
+          <p className="text-gray-400 mt-4 text-sm">每股$15至每股$60</p>
         </div>
         <div
           ref={right.ref}
@@ -129,7 +129,7 @@ function StatsSection() {
             中工市場派經營不當過去10年股價平均
           </p>
           <p className="text-6xl md:text-8xl font-black text-white">
-            {right.value.toFixed(2)}
+            ${right.value.toFixed(2)}
           </p>
           <p className="text-gray-400 mt-4 text-sm">2015/11 至 2025/10</p>
         </div>
