@@ -109,11 +109,11 @@ function StatsSection() {
       className="w-full"
       style={{ background: '#0a1628' }}
     >
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2">
+      <div className="w-full grid md:grid-cols-2">
         {/* Left card - sky blue with clouds */}
         <div
           ref={left.ref}
-          className="p-8 md:p-10"
+          className="px-8 py-10 md:px-16 md:py-12"
           style={{
             background: `
               radial-gradient(ellipse 140px 70px at 15% 20%, rgba(255,255,255,0.75) 0%, transparent 65%),
@@ -137,7 +137,7 @@ function StatsSection() {
         {/* Right card */}
         <div
           ref={right.ref}
-          className="p-8 md:p-10"
+          className="px-8 py-10 md:px-16 md:py-12"
           style={{ background: 'rgba(26, 26, 26, 0.92)' }}
         >
           <p className="text-white font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)' }}>
