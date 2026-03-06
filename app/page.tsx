@@ -105,7 +105,7 @@ function StatsSection() {
   const right = useCountUp(8.24, 1500, 2);
 
   return (
-    <section style={{ background: '#0a1628' }}>
+    <section style={{ background: '#000' }}>
       <div className="max-w-[960px] mx-auto">
         <div className="grid md:grid-cols-2">
           {/* Left card - sky blue with clouds */}
@@ -173,7 +173,7 @@ function StrategySection() {
   return (
     <section
       className="w-full py-16 px-4"
-      style={{ background: '#0a1628' }}
+      style={{ background: '#000' }}
     >
       <div className="max-w-[960px] mx-auto">
         <div className="flex items-center gap-4 mb-12">
@@ -216,7 +216,7 @@ function StrategyItem({ item, delay }: { item: typeof strategies[0]; delay: numb
 
 function Footer() {
   return (
-    <footer style={{ background: '#0a1628' }}>
+    <footer style={{ background: '#000' }}>
       <div className="max-w-[960px] mx-auto py-12 px-4 text-center">
         <img
           src="/header/mobile/mHeader2-CTA.png"
@@ -242,7 +242,7 @@ function Footer() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen" style={{ background: '#0a1628' }}>
+    <main className="min-h-screen" style={{ background: '#000' }}>
       <HeroSection />
       <StatsSection />
       <StrategySection />
