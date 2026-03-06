@@ -105,41 +105,53 @@ function StatsSection() {
   const right = useCountUp(8.24, 1500, 2);
 
   return (
-    <section className="w-full py-16 px-4" style={{ background: '#0a1628' }}>
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+    <section
+      className="w-full"
+      style={{
+        background: 'linear-gradient(180deg, #a8d4f0 0%, #c8e6f5 40%, #7bb8d4 100%)',
+      }}
+    >
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2">
+        {/* Left card */}
         <div
           ref={left.ref}
-          className="rounded-2xl p-8 text-center"
-          style={{ background: 'linear-gradient(135deg, #111d35, #1a2d50)' }}
+          className="p-8 md:p-10"
+          style={{ background: 'rgba(10, 30, 70, 0.88)' }}
         >
-          <p className="text-gray-300 text-sm md:text-base mb-4">
-            寶佳入主華建後改善經營股價翻倍
+          <p className="text-white text-lg md:text-xl font-bold leading-snug mb-4">
+            寶佳入主華建後<br />改善經營股價翻倍
           </p>
-          <p className="text-6xl md:text-8xl font-black" style={{ color: '#f5c542' }}>
+          <p className="font-black leading-none" style={{ color: '#3b9fe8', fontSize: 'clamp(72px, 12vw, 120px)' }}>
             {left.value}%
           </p>
-          <p className="text-gray-400 mt-4 text-sm">每股$15至每股$60</p>
+          <p className="text-gray-300 mt-3 text-sm">每股$15至每股$60</p>
         </div>
+
+        {/* Right card */}
         <div
           ref={right.ref}
-          className="rounded-2xl p-8 text-center"
-          style={{ background: 'linear-gradient(135deg, #111d35, #1a2d50)' }}
+          className="p-8 md:p-10"
+          style={{ background: 'rgba(28, 28, 40, 0.88)' }}
         >
-          <p className="text-gray-300 text-sm md:text-base mb-4">
-            中工市場派經營不當過去10年股價平均
+          <p className="text-white text-lg md:text-xl font-bold leading-snug mb-4">
+            中工市場派經營不當<br />過去10年股價平均
           </p>
-          <p className="text-6xl md:text-8xl font-black text-white">
+          <p className="font-black leading-none" style={{ color: '#f5c518', fontSize: 'clamp(72px, 12vw, 120px)' }}>
             ${right.value.toFixed(2)}
           </p>
-          <p className="text-gray-400 mt-4 text-sm">2015/11 至 2025/10</p>
+          <p className="text-gray-400 mt-3 text-sm">2015/11 至 2025/10</p>
         </div>
       </div>
-      <p
-        className="text-center text-lg md:text-xl font-bold mt-10"
-        style={{ color: '#f5c542' }}
+
+      {/* Bottom tagline bar */}
+      <div
+        className="w-full py-4 px-4 text-center"
+        style={{ background: '#1a7fd4' }}
       >
-        如何選擇，股東的眼睛是雪亮的
-      </p>
+        <p className="text-white text-lg md:text-2xl font-black tracking-wide">
+          如何選擇，股東的眼睛是雪亮的
+        </p>
+      </div>
     </section>
   );
 }
