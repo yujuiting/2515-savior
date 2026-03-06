@@ -125,13 +125,13 @@ function StatsSection() {
             `,
           }}
         >
-          <p className="text-white font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)' }}>
+          <p className="font-bold leading-snug mb-4" style={{ fontSize: 'clamp(18px, 2.2vw, 26px)', color: '#0d2a4a' }}>
             寶佳入主華建後<br />改善經營股價翻倍
           </p>
-          <p className="font-black leading-none" style={{ color: '#4A7FB5', fontSize: 'clamp(80px, 13vw, 110px)' }}>
+          <p className="font-black leading-none" style={{ color: '#1a3f6e', fontSize: 'clamp(80px, 13vw, 110px)' }}>
             {left.value}%
           </p>
-          <p className="mt-3 text-sm" style={{ color: '#AAAAAA' }}>每股$15至每股$60</p>
+          <p className="mt-3 text-sm" style={{ color: '#334455' }}>每股$15至每股$60</p>
         </div>
 
         {/* Right card */}
