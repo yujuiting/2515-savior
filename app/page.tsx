@@ -224,9 +224,14 @@ function Footer() {
           alt="LINE QR Code"
           className="mx-auto mb-6 w-48 h-48 object-contain"
         />
-        <span className="inline-block bg-green-600 text-white text-sm font-bold px-4 py-1 rounded-full mb-4">
+        <a
+          href="https://line.me/R/ti/p/@452zsagz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-green-600 text-white text-sm font-bold px-4 py-1 rounded-full mb-4 hover:bg-green-500 transition-colors"
+        >
           @99-2515
-        </span>
+        </a>
         <p className="text-gray-300 text-sm md:text-base mb-6">
           以實際行動翻轉經營，強化公司治理，並提升營運績效
         </p>
