@@ -94,12 +94,11 @@ function HeroSection() {
           className="absolute top-0 left-0 w-full h-full"
           style={{ objectFit: 'fill' }}
         />
-        {/* CTA */}
+        {/* CTA - contain to keep QR code square */}
         <img
           src="/header/Header2-CTA.png"
           alt="CTA"
-          className="absolute top-0 left-0 w-full h-full"
-          style={{ objectFit: 'fill' }}
+          className="absolute top-0 left-0 w-full h-full object-contain"
         />
       </div>
       {/* Mobile */}
