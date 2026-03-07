@@ -61,13 +61,6 @@ function HeroSection() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  const layers = [
-    { desktop: '/header/Header4-Bottom.png', mobile: '/header/mobile/mHeader4-Bottom.png', alt: 'Background' },
-    { desktop: '/header/Header1-Top.png', mobile: '/header/mobile/mHeader1-Top.png', alt: 'Foreground' },
-    { desktop: '/header/Header3-Text.png', mobile: '/header/mobile/mHeader3-Text.png', alt: 'Title' },
-    { desktop: '/header/Header2-CTA.png', mobile: '/header/mobile/mHeader2-CTA.png', alt: 'CTA' },
-  ];
-
   return (
     <section
       className="relative w-full transition-opacity duration-[800ms]"
@@ -75,15 +68,39 @@ function HeroSection() {
     >
       {/* Desktop */}
       <div className="hidden md:block relative w-full" style={{ aspectRatio: '1268 / 460' }}>
-        {layers.map((layer, i) => (
-          <img
-            key={i}
-            src={layer.desktop}
-            alt={layer.alt}
-            className="absolute top-0 left-0 w-full h-full"
-            style={{ objectFit: 'fill' }}
-          />
-        ))}
+        {/* Background */}
+        <img
+          src="/header/Header4-Bottom.png"
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ objectFit: 'fill' }}
+        />
+        {/* Trees - stretch full width */}
+        <img
+          src="/header/Header1-1-TopTrees.png"
+          alt="Trees"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        {/* Building - centered, maintain aspect ratio */}
+        <img
+          src="/header/Header1-Top.png"
+          alt="Building"
+          className="absolute top-0 left-0 w-full h-full object-contain"
+        />
+        {/* Text */}
+        <img
+          src="/header/Header3-Text.png"
+          alt="Title"
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ objectFit: 'fill' }}
+        />
+        {/* CTA */}
+        <img
+          src="/header/Header2-CTA.png"
+          alt="CTA"
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ objectFit: 'fill' }}
+        />
       </div>
       {/* Mobile */}
       <div className="md:hidden relative w-full">
@@ -92,7 +109,20 @@ function HeroSection() {
           alt="Background"
           className="w-full block"
         />
-        <img src="/header/mobile/mHeader1-Top.png" alt="Foreground" className="absolute top-0 left-0 w-full" />
+        {/* Trees - stretch full width */}
+        <img
+          src="/header/mobile/mHeader1-1-TopTrees.png"
+          alt="Trees"
+          className="absolute top-0 left-0 w-full object-cover"
+          style={{ height: 'auto' }}
+        />
+        {/* Building - centered */}
+        <img
+          src="/header/mobile/mHeader1-Top.png"
+          alt="Building"
+          className="absolute top-0 left-1/2 -translate-x-1/2"
+          style={{ height: 'auto', maxWidth: '100%' }}
+        />
         <img src="/header/mobile/mHeader3-Text.png" alt="Title" className="absolute top-0 left-0 w-full" />
         <img src="/header/mobile/mHeader2-CTA.png" alt="CTA" className="absolute top-0 left-0 w-full" />
       </div>
